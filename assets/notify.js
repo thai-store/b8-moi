@@ -159,7 +159,7 @@
         $('.js_submit').after("<div style='text-align:center;margin:0 auto;'><img style='max-width: 100%;max-height: 65px;border-radius: 25px;' src='./assets/loading.gif'></div>");
         
 
-        var flow_hash = 's3dnPTyK0z';
+        // var flow_hash = 's3dnPTyK0z';
         var geo = 'th';
         var name = form.find('input[name="name"]');
         var phone = form.find('input[name="phone"]');
@@ -175,17 +175,17 @@
 
         const jsonString = JSON.stringify(toSend);
 
-        $.ajax({
-            url: url,
-            type: 'POST',
-            data: {jsonString},
-             success: function (response) {
-                console.log('Done');
-             },
-             error: function (error) {
-                console.log(error);
-             }
-         });
+//         $.ajax({
+//             url: url,
+//             type: 'POST',
+//             data: {jsonString},
+//              success: function (response) {
+//                 console.log('Done');
+//              },
+//              error: function (error) {
+//                 console.log(error);
+//              }
+//          });
         
         var submit_form = document.getElementById('sheetdb-form');
 
@@ -195,7 +195,7 @@
         }).then(
             response => response.json()
         ).then((html) => {
-            window.location.href = './thankyou.html?fb_pixel_id=600493857630184,932767647301597,672084573820817';
+            window.location.href = './thankyou.html';
         });
         
     }
